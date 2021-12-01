@@ -2,19 +2,16 @@ using System;
 
 namespace Garage
 {
-    public class Zero : Vehicle
+    public class Zero : Vehicle, IElectricVehicle
     {
         public double BatteryKWh { get; set; }
-        public string MainColor { get; set; }
-        public int MaximumOccupancy { get; set; }
+
+        public int CurrentChargePercentage { get; set; }
 
         public void ChargeBattery()
         {
-            // method definition omitted
-        }
-        public override void Drive()
-        {
-            Console.WriteLine("The Black Zero zips by you. zewwwww!");
+            CurrentChargePercentage = 100;   // method body omitted
         }
     }
+
 }
